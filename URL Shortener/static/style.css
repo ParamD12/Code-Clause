@@ -1,0 +1,107 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+
+h1 {
+    text-align: left;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 0;
+    order: 2;
+}
+
+input[type="text"] {
+    order: 1;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #555;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error-box {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+}
+
+.error-box p {
+    margin: 0;
+}
+
+.error-box button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #721c24;
+    background-color: #f5c6cb;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.error-box button:hover {
+    background-color: #f1949b;
+}
+
+/* Keep the existing styles here... */
+
+#copy-button {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 180px;
+    text-align: center; /* Align the button to the left */
+}
+
+#copy-button:hover {
+    background-color: #0056b3;
+}

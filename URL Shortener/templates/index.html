@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function clearInput() {
+            document.getElementById('url-input').value = '';
+        }
+
+        function copyToClipboard() {
+            var shortenedUrl = document.getElementById('short-url').getAttribute('href');
+            var tempInput = document.createElement('input');
+            tempInput.value = shortenedUrl;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('URL copied to clipboard!');
+        }
+    </script>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <hr>
+    <br>
+    {% if error %}
+        <div class="error-box">
+            <p>Please enter a valid URL.</p>
+            <button onclick="clearInput()">OK</button>
+        </div>
+    {% endif %}
+    <form action="/shorten" method="POST">
+        <input type="text" name="url" id="url-input" placeholder="Enter URL" required>
+        <button type="submit">Shorten</button>
+    </form>
+    <br> <hr> <br>
+    <p>Your shortened URL: <a id="short-url" href="{{ short_url }}">{{ short_url }}</a></p>
+    <button id="copy-button" onclick="copyToClipboard()">Copy to clipboard</button>
+    <footer>
+        Made by Param Dhingana <br> 
+        Python Development Intern @ Code Clause
+    </footer>
+</body>
+</html>
