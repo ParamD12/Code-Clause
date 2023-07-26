@@ -1,2 +1,2 @@
 # Code-Clause
-Code Clause Internship
+Code Clause Internship Tasks
